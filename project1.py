@@ -1,7 +1,10 @@
+from math import pi
+
 while True:
     t = input("Enter the type of figure you want (2D/3D) - ")
-
-    if t.strip().lower() == "2d":
+    
+    while True : 
+     if t.strip().lower() == "2d":
         
         print("Options - Circle , Square , Rectangle , Parallelogram , Triangle , Trapezium")
         
@@ -10,7 +13,6 @@ while True:
         if a.strip().lower() == "circle":
             
             r = float(input("Enter the radius of the circle - "))
-            from math import pi
             
             print(f"The circumference of this circle is {2 * pi * r} and its area is {pi * (r ** 2)}")
 
@@ -55,8 +57,13 @@ while True:
             j = float(input("Enter the perpendicular distance between them - "))
 
             print(f"The area of this trapezium is {(1 / 2) * (g + i) * j}")
-            
-    elif t.strip().lower() == "3d":  
+
+        Condition1 = input("Do you want to continue with 2D figures(Yes/No) - ")
+        if Condition1.strip().lower() == "no" : 
+         break 
+
+     elif t.strip().lower() == "3d":  
+      while True : 
            
         print("Options - Cube , Cuboid , Sphere , Hemisphere , Right circular Cylinder , Right circular Cone , Torus(Donut shape) , Disc")
     
@@ -103,7 +110,10 @@ while True:
             
             print(f"The total surface area of this torus is {4*(pi**2)*R*rad} and the volume is {2*(pi**2)*R*(rad**2)}")
 
-       
+        Condition2 = input("Do you want to continue with 3D figures(Yes/No) - ")
+        if Condition2.strip().lower() == "no" :
+         break
 
-
-
+Condition3 = input("Do you want to continue(Yes/No) - ")    
+if Condition3.strip().lower() == "no" : 
+    break
