@@ -58,14 +58,52 @@ while True:
             
     elif t.strip().lower() == "3d":  
            
-        print("Options - Cube , Cuboid , Sphere , Hemisphere , Right circular Cylinder , Right circular Cone , Ring , Disc")
-        
+        print("Options - Cube , Cuboid , Sphere , Hemisphere , Right circular Cylinder , Right circular Cone , Torus(Donut shape) , Disc")
+    
         q = input("Choose the shape/figure - ")   
 
         if q.strip().lower() == "cube" : 
             
             m = float(input("Enter the length of the cube's side - "))
             
-            print(f"The lateral and total surface area of this cube is {4*(m**2)} and {6*(m**2)} the volume of this cube is {m**3}")
+            print(f"The lateral and total surface area of this cube is {4*(m**2)} and {6*(m**2)} and the volume is {m**3}")
             
         elif q.strip().lower() == "cuboid" :
+           n = float(input("Enter the length of the cuboid - "))
+           o = float(input("Enter the breadth of the cuboid - "))
+           p = float(input("Enter the height of the cuboid - "))
+           
+           print(f"The lateral and total surface area of this cuboid is {2*p*(n + o)} and *{2*(o*n + n*p + p*n)} and the volume is {n*o*p}") 
+
+        elif q.strip().lower() == "sphere" :
+            r = float(input("Enter the radius of the sphere - "))
+            
+            print(f"The total surface area of the sphere is {4*pi*(r**2)} and the volume is {(4/3)*pi*(r**3)}")
+            
+        elif q.strip().lower() == "hemisphere" :
+            u = float(input("Enter the radius of the hemisphere - "))
+            
+            print(f"The curved and total surface area of this hemisphere is {2*pi*(r**2)} and {3*pi*(r**2)} and the volume is {(2/3)*pi*(r**3)}")
+            
+        elif q.strip().lower() == "rightcircularcylinder" or q.strip().lower() == "disc":
+            v = float(input(f"Enter the height of the {q.strip().lower()} - "))
+            w = float(input(f"Enter the radius of the {q.strip().lower()}- "))
+            
+            print(f"The curved and total surface area of this {q.strip().lower()} is {2*pi*v*w} and {2*pi*w*(v + w)} and the volume is {pi*(w**2)*v}")
+
+        elif q.strip().lower() == "rightcircularcone" :
+            x = float(input("Enter the height of the cone - "))
+            y = float(input("Enter the radius of the cone - "))
+            
+            print(f"The curved and total surface area of the cone is {pi*y*((x**2) + (y**2))**(1/2)} and the volume is {(1/3)*pi*(y**2)*x}")
+
+        elif q.strip().lower == "torus" : 
+            R = float(input("Enter the major radius of the torus - "))
+            rad = float(input("Enter the minor radius of the torus - "))
+            
+            print(f"The total surface area of this torus is {4*(pi**2)*R*rad} and the volume is {2*(pi**2)*R*(rad**2)}")
+
+       
+
+
+
